@@ -1,0 +1,73 @@
+.display{
+    width: 100%;
+    background-color: var(--bege);
+    color: var(--marrom);
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    & .musica{
+        display: flex;
+        font-size: 0.8rem;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem 2rem;
+        & img{
+            width: 50px;
+            height: 50px;
+            border-radius: 0.2rem;
+        }
+        & i{
+            font-size: 1.2rem;
+        }
+    }
+    & .controlador{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.2rem;
+        & .play{
+            font-size: 2rem;
+        }
+    }
+    & .configdamusica{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        font-size: 1.2rem;
+    }
+}
+input[type="range"] {
+    accent-color: var(--marrom);
+}
+@media screen and (max-width: 1900px) {
+    .display{
+        position: fixed;
+        z-index: 2;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        & .musica{
+            & i{
+                display: none;
+            }
+        }
+        & .controlador{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.2rem;
+            & .play{
+                font-size: 2rem;
+            }
+        }
+        & .configdamusica{
+            display: none;
+        }
+    }
+}
