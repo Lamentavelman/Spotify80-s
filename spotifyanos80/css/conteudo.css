@@ -1,0 +1,467 @@
+.conteudo{
+    height: 90%;
+    width: 77%;
+    background-color: var(--cinza);
+    color: var(--marrom);
+    margin-left: 22%;
+    margin-top: 0.5rem;
+    border-radius: 1rem ;
+    position: absolute;
+    & .usuario{
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 2rem;
+        & .paginacao{
+            display: block;
+            gap: 0.5rem;
+            & i{
+                padding: 0.5rem 0.7rem;
+                border-radius: 100%;
+                background-color: var(--marrom);
+                color: var(--bege);
+            }
+        }
+        & .conta{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.8rem;
+            & p{
+                padding: 0.5rem 1rem;
+                border-radius: 1rem;
+                background-color: var(--bege-claro);
+                & i{
+                    padding: 0rem 1rem 0rem 0rem;
+                }
+            }
+            & .plano{
+                padding: 0.5rem 1rem;
+                border-radius: 1rem;
+                background-color: var(--marrom);
+                color: var(--bege);
+            }
+            & i{
+                padding: 1rem;
+                border-radius: 100%;
+                background-color: var(--bege-claro);
+            }
+            & img{
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+            }
+        }
+        & .contacelular{
+            display: none;
+            & p{
+                padding: 0.5rem 1rem;
+                border-radius: 1rem;
+                background-color: var(--bege-claro);
+                & i{
+                    padding: 0rem 1rem 0rem 0rem;
+                }
+            }
+            & .plano{
+                padding: 0.5rem 1rem;
+                border-radius: 1rem;
+                background-color: var(--marrom);
+                color: var(--bege);
+            }
+            & i{
+                padding: 1rem;
+                border-radius: 100%;
+                background-color: var(--bege-claro);
+            }
+            & img{
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+            }
+        }
+    }
+    & .scrollbar {
+        padding-right: 2.5rem;
+        height: 800px;
+        width: 1400px;
+        overflow: auto;
+        color: var(--marrom);
+        margin: 0rem 2rem;
+        & h2{
+            margin-top: 4rem;
+        }
+        & .recente{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1rem 0rem 0rem 0rem;
+            & .recentemente{
+                display: flex;
+                align-items: center;
+                background-color: var(--bege-claro);
+                border-radius: 0.5rem;
+                gap: 1rem;
+                justify-content: flex-start;
+                & img{
+                    border-radius: 0.5rem 0rem 0rem 0.5rem;
+                    width: 75px;
+                    height: 75px;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;                
+                }
+                & .play {
+                    position: relative;
+                    & .fa {
+                        position: absolute;
+                        padding: 0.8rem 0.9rem;
+                        background-color: var(--verde);
+                        border-radius: 100%;
+                        opacity: 0;
+                        transition: all ease 0.4s;
+                        bottom: -20px;
+                        margin: 0rem 6rem;
+                    }
+                }
+            }
+            & .recentemente:hover{
+                background-color: var(--hover);
+                & .play {
+                    & .fa {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        & .tocados{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0rem;
+            gap: 2rem;
+            & .tocadomusica{
+                display: flex;
+                flex-direction: column;
+                padding: 0.5rem 0rem;
+                gap: 1rem;
+                align-items: baseline;
+                font-size: 0.8rem;
+                & img{
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 0.5rem;
+                    box-shadow: rgba(252, 208, 126, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+                }
+                & .play {
+                    position: relative;
+                    & .fa {
+                        position: absolute;
+                        padding: 0.8rem 0.9rem;
+                        background-color: var(--verde);
+                        border-radius: 100%;
+                        opacity: 0;
+                        transition: all ease 0.4s;
+                        bottom: 17px;
+                        left: 150px;
+                    }
+                }
+            }
+            & .tocadomusica:hover{
+                background-color: var(--hover);
+                & .play {
+                    & .fa {
+                        opacity: 1;
+                    }
+                }
+            }
+            & .tocadocantor{
+                display: flex;
+                flex-direction: column;
+                padding: 0.5rem 0rem;
+                gap: 1rem;
+                align-items: baseline;
+                font-size: 0.8rem;
+                border-radius: 1rem;
+                padding: 0.5rem;
+                & img{
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 100%;
+                    box-shadow: rgba(252, 208, 126, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+                }
+                & .play {
+                    position: relative;
+                    & .fa {
+                        position: absolute;
+                        padding: 0.8rem 0.9rem;
+                        background-color: var(--verde);
+                        border-radius: 100%;
+                        opacity: 0;
+                        transition: all ease 0.4s;
+                        bottom: 17px;
+                        left: 160px;
+                    }
+                }
+            }
+            & .tocadocantor:hover{
+                background-color: var(--hover);
+                & .play {
+                    & .fa {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        & .artistas{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0rem;
+            gap: 2rem;
+            & .artista{
+                display: flex;
+                flex-direction: column;
+                padding: 0.5rem 0rem;
+                gap: 1rem;
+                align-items: baseline;
+                font-size: 0.8rem;
+                & img{
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 100%;
+                    box-shadow: rgba(252, 208, 126, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+                }
+                & .play {
+                    position: relative;
+                    & .fa {
+                        position: absolute;
+                        padding: 0.8rem 0.9rem;
+                        background-color: var(--verde);
+                        border-radius: 100%;
+                        opacity: 0;
+                        transition: all ease 0.4s;
+                        bottom: 17px;
+                        left: 150px;
+                    }
+                }
+            }
+            & .artista:hover{
+                background-color: var(--hover);
+                & .play {
+                    & .fa {
+                        opacity: 1;
+                    }
+                }
+            }        
+        }
+        & .musicas{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0rem;
+            gap: 2rem;
+            & .musica{
+                display: flex;
+                flex-direction: column;
+                padding: 0.5rem 0rem;
+                gap: 1rem;
+                align-items: baseline;
+                font-size: 0.8rem;
+                & img{
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 0.5rem;
+                    box-shadow: rgba(252, 208, 126, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+                }
+                & .play {
+                    position: relative;
+                    & .fa {
+                        position: absolute;
+                        padding: 0.8rem 0.9rem;
+                        background-color: var(--verde);
+                        border-radius: 100%;
+                        opacity: 0;
+                        transition: all ease 0.4s;
+                        bottom: 17px;
+                        left: 150px;
+                    }
+                }
+            }
+            & .musica:hover{
+                background-color: var(--hover);
+                & .play {
+                    & .fa {
+                        opacity: 1;
+                    }
+                }
+            } 
+        }
+        & .footer{
+            margin: 5rem 0rem 3rem 0rem;
+            display: flex;
+            justify-content: space-between;
+            color: var(--marrom-scroll);
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--marrom-scroll);
+            & ul{
+                & .ativo{
+                    color: var(--marrom);
+                }
+                & li{
+                    padding: 0.4rem 0rem;
+                }
+            }
+            & .socials{
+                display: flex;
+                gap: 0.8rem;
+                & .social i{
+                    padding: 0.8rem;
+                    border-radius: 100%;
+                    background-color: var(--marrom);
+                    color: var(--bege);
+                }
+            }
+        }
+        & .termos{
+            display: flex;
+            flex-direction: row;
+            color: var(--marrom-scroll);
+            justify-content: space-between;
+            margin-bottom: 5rem;
+            & .termo{
+                display: flex;
+                gap: 0.8rem;
+            }
+            & p{
+                & i{
+                    margin: 0rem 1rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1900px) {
+    .conteudo{
+        height: 100%;
+        width: 85%;
+        background-color: transparent;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        & .usuario{
+            & .paginacao{
+                display: none;
+            }
+            & .conta{
+                display: none;
+            }
+            & .contacelular{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+        & .scrollbar {
+            position: relative;
+            margin: 0;
+            padding-right: 2.5rem;
+            height: 800px;
+            width: 100%;
+            & .recente{
+                grid-template-columns: repeat(2, 1fr);
+                & .recentemente{
+                    & .play {
+                        & .fa {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            & .tocados{
+                overflow: auto;
+                white-space: nowrap;
+                & .tocadomusica{
+                    & img{
+                        width: 130px;
+                        height: 130px;
+                    }
+                    & .play {
+                        & .fa {
+                            bottom: 17px;
+                            left: 96px;
+                        }
+                    }
+                }
+                & .tocadocantor{
+                    & img{
+                        width: 130px;
+                        height: 130px;
+                    }
+                    & .play {
+                        & .fa {
+                            bottom: 17px;
+                            left: 96px;
+                        }
+                    }
+                }
+            }
+            & .artistas{
+                overflow: auto;
+                white-space: nowrap;
+                & .artista{
+                    & img{
+                        width: 130px;
+                        height: 130px;
+                    }
+                    & .play {
+                        & .fa {
+                            bottom: 17px;
+                            left: 96px;
+                        }
+                    }
+                }
+            }
+            & .musicas{
+                overflow: auto;
+                white-space: nowrap;
+                & .musica{
+                    & img{
+                        width: 130px;
+                        height: 130px;
+                    }
+                    & .play {
+                        & .fa {
+                            bottom: 17px;
+                            left: 96px;
+                        }
+                    }
+                }
+            }
+            & .footer{
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            & .termos{
+                flex-wrap: wrap;
+                gap: 1rem;
+                & .termo{
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+#scrollbarh::-webkit-scrollbar {
+    width: 5px;
+}
+
+#scrollbarh::-webkit-scrollbar-track {
+    background-color: #e7e7e700;
+}
+
+#scrollbarh::-webkit-scrollbar-thumb {
+    background-color: var(--bege-claro);
+}
