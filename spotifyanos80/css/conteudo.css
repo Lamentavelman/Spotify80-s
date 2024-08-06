@@ -454,6 +454,31 @@
         }
     }
 }
+@media screen and (max-width: 400px) {
+    .conteudo{
+        width: 82%;
+        & .usuario{
+            & .paginacao{
+                display: none;
+            }
+            & .conta{
+                display: none;
+            }
+            & .contacelular{
+                gap: 0.5rem;
+                font-size: 0.6rem;
+            }
+        }      
+        & .scrollbar {
+            & .recente{
+                grid-template-columns: repeat(1fr);
+                & .recentemente{
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+}
 #scrollbarh::-webkit-scrollbar {
     width: 5px;
 }
